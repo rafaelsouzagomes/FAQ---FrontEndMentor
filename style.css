@@ -1,0 +1,135 @@
+html {
+    box-sizing: border-box;
+}
+  
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+:root {
+  --softRed:  hsl(14, 88%, 65%);
+  --veryDarkBlue: hsl(238, 29%, 16%);
+  --softViolet: hsl(273, 75%, 66%);
+  --softBlue: hsl(240, 73%, 65%);
+  --veryDarGrayshBlue: hsl(237, 12%, 33%);
+  --darGrayshBlue: hsl(240, 6%, 50%);
+  --lightGrayishBlue: hsl(240, 5%, 91%);
+  --mainFontSize: 0.75rem;
+  --mainFontFamily: 'Kumbh Sans', serif; 
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--mainFontSize);
+  font-family: var(--mainFontFamily);
+  background: var(--softViolet);
+  min-height: 100vh;
+}
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.faqPainel{
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  width: 60rem;
+  height: 30rem;
+  border-radius: 1.5rem;
+  background: white;  
+}
+
+.logo{
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  width: 100vh;
+  top: 10%;
+  right: 6%;
+
+}
+
+img{
+  align-self: center;
+}
+
+#boxPic{
+  position:absolute;
+  top:  39%;
+  right: 74.5%;
+}
+
+.title{
+  margin-top: 3rem;
+  font-weight: 900;
+  font-size: 1.65rem;
+  font-family: var(--mainFontFamily);
+}
+
+.accordion__label{
+  font-size: 0.99rem;
+  font-family: var(--mainFontFamily);
+  font-weight: 100;
+  color: var(--veryDarkBlue);
+  
+}
+
+.accordion__content  {
+  min-width: 100%;
+  min-height: 100%;
+  color: var(--darGrayshBlue);
+  transition: width display block 10s ease;
+ 
+}
+.hidden {
+  display: none;
+}
+
+.visuallyhidden {
+  /* opacity: 0; */
+
+}
+
+
+.arrow{
+  position: absolute;
+  top: 8%;
+  right: 0;
+}
+
+.arrow-rotated{
+  transform:  rotate(180deg);
+  
+}
+
+.linha-horizontal{
+  position: relative;
+  width: 100%;
+  border: 1px solid var(--lightGrayishBlue);
+  margin-bottom: 18px;
+  margin-top: 18px;
+}
+
+.info{
+  position: relative;
+  /* border:1px solid black; */
+  width: 20rem;
+}
+
+.boardInfos{
+  position: relative;
+  width: 35rem;
+}
+
