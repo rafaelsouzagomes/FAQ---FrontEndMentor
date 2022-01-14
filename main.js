@@ -4,12 +4,6 @@ function OpenOrCloseQuestion(questionName, arrowId){
     const question = document.getElementById(questionName);
     const arrow = document.getElementById(arrowId);
     
-    var paragraphs = document.getElementsByTagName("p");
-    console.log(paragraphs);
-
-    var firstColumn = document.getElementsByClassName("hidden");
-    console.log(firstColumn);
-
     if(question.classList.contains('hidden')){
         question.classList.remove('hidden');
         arrow.classList.add('arrow-rotated');

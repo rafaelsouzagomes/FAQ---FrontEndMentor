@@ -93,6 +93,12 @@ img{
   transition: width display block 10s ease;
  
 }
+
+.accordion__label:hover{
+  color: orange;
+}
+
+
 .hidden {
   display: none;
 }
@@ -133,3 +139,59 @@ img{
   width: 35rem;
 }
 
+@media (max-width: 375px) {
+  
+  html,body{ 
+    margin:0; 
+    padding:0; 
+    height:100%; 
+    width:100%; 
+    
+    /* centralizar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    
+    /* debugar */
+    background-color: red; 
+    border: 1px solid black;
+    /* font-size:  10px; */
+  } 
+  
+
+  img{
+    display: none;
+  }
+
+  .faqPainel{
+    position: relative;
+    top: 5%;
+    height:80%;
+    width: 80%;
+    overflow:hidden;
+    border-radius: 1.5rem;
+    background: white;
+  }
+
+  .boardInfos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid black; */
+    /* max-width: 50%; */
+  }
+
+  .info{
+    padding-left:  20px;
+    padding-right: 20px;
+ 
+    /* border: 1px solid black; */
+    /* max-width: 400px; */
+
+  }
+  .accordion__label{
+    font-size: 0.75rem;
+  }
+
+ }
