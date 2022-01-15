@@ -154,7 +154,6 @@ img{
     align-content: center;
     
     /* debugar */
-    background-color: red; 
     border: 1px solid black;
     /* font-size:  10px; */
   } 
@@ -169,7 +168,9 @@ img{
     top: 5%;
     height:80%;
     width: 80%;
-    overflow:hidden;
+    /* overflow:hidden; */
+    word-break:break-all;
+
     border-radius: 1.5rem;
     background: white;
   }
@@ -192,6 +193,23 @@ img{
   }
   .accordion__label{
     font-size: 0.75rem;
+  }
+  
+  .accordion__label:hover{
+    color:hsl(238, 29%, 16%);
+    font-weight: 600;
+  }
+
+  .accordion__content > p  {
+    /* border: 1px solid black; */
+    width: 13.5rem;
+    word-break:keep-all;
+
+  }
+
+  .info {
+    /* border: 1px solid black; */
+    width: 18rem;
   }
 
  }
