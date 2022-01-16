@@ -130,7 +130,6 @@ img{
 
 .info{
   position: relative;
-  /* border:1px solid black; */
   width: 20rem;
 }
 
@@ -146,21 +145,23 @@ img{
     padding:0; 
     height:100%; 
     width:100%; 
-    
-    /* centralizar */
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
-    
-    /* debugar */
-    border: 1px solid black;
-    /* font-size:  10px; */
   } 
   
+  .logo   img {
+    width: 13rem;
+    position: absolute;
+    left: 3.5rem;
+    top: -8.7rem;
+  }
 
-  img{
-    display: none;
+  #boxPic  {
+    position: absolute;
+    width: 6rem;
+    top: -6rem;
   }
 
   .faqPainel{
@@ -168,9 +169,7 @@ img{
     top: 5%;
     height:80%;
     width: 80%;
-    /* overflow:hidden; */
-    word-break:break-all;
-
+    overflow-wrap: auto;
     border-radius: 1.5rem;
     background: white;
   }
@@ -179,18 +178,13 @@ img{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* border: 1px solid black; */
-    /* max-width: 50%; */
   }
 
   .info{
     padding-left:  20px;
     padding-right: 20px;
- 
-    /* border: 1px solid black; */
-    /* max-width: 400px; */
-
   }
+
   .accordion__label{
     font-size: 0.75rem;
   }
@@ -201,15 +195,21 @@ img{
   }
 
   .accordion__content > p  {
-    /* border: 1px solid black; */
     width: 13.5rem;
     word-break:keep-all;
 
   }
 
   .info {
-    /* border: 1px solid black; */
     width: 18rem;
+  }
+
+  .arrow{
+    margin-right: 1.4rem;
+  }
+
+  .title{
+    margin-right: 1rem;
   }
 
  }
