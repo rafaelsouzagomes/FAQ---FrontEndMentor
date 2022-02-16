@@ -2,94 +2,75 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kumbh+Sans">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="stylesheet" href="style.css">  
-    <title>Frontend Mentor | FAQ Accordion Card</title>
+    <title> Rafael Gomes | FAQ Accordion Card</title>
   </head>
-
   <body>
-    <section class="faqPainel">
-      <div class="logo">    
-        <img  id="womanPic" src="images/illustration-woman-online-desktop.svg" alt="Woman Online Desktop">
-        <img  id="boxPic" src="images/illustration-box-desktop.svg" alt="Box Desktop"> 
+    <main class="painel">
+      <div class="logo-images">    
+        <img id="pattern-image-desktop" src="./images/bg-pattern-desktop.svg" alt="background image pattern" />
+        <img  id="concept-picture-desktop" src="images/illustration-woman-online-desktop.svg" alt="Logo Concept Desktop">  
+        <img  id="concept-picture-mobile" src="./images/illustration-woman-online-mobile.svg" alt="Logo Concept Desktop mobileo"  />
+        <img id="pattern-image-mobile" src="./images/bg-pattern-mobile.svg" alt="background image pattern" >
+        <img  id="box-picture" src="images/illustration-box-desktop.svg" alt="Box"> 
       </div>
-      <div class="boardInfos">     
-        <div class="title">
-          <h1>FAQ</h1>
-        </div>  
-        <div class="info">
-          <label class="accordion__label"> 
-            How many team members can I invite?                               
-            <button href="#target1" onclick="OpenOrCloseQuestion('firstQuestion','arrowFirstQuestion')">
-              <img class="arrow" id="arrowFirstQuestion" src="images/icon-arrow-down.svg" alt="Seta"> 
-            </button>
-          </label>   
-          <div class="accordion__content hidden" id="firstQuestion">
-            <p> You can invite up to 2 additional users on the Free plan. There is no limit on 
-                team members for the Premium plan.
-            </p>
-          </div> 
-
-          <div class="linha-horizontal"></div>
-        </div>
-        <div class="info">
-          <label  class="accordion__label"> 
-            What is the maximum file upload size?
-            <button href="#" onclick="OpenOrCloseQuestion('secondQuestion','arrowSecondQuestion')">
-              <img class="arrow" id="arrowSecondQuestion" src="images/icon-arrow-down.svg" alt="Seta"> 
-            </button>
-          </label> 
-          <div class="accordion__content hidden" id="secondQuestion">
-            <p> No more than 2GB. All files in your account must fit your allotted storage space.
-            </p>
-          </div>
-          <div class="linha-horizontal"></div>
-        </div>
-        <div class="info">
-          <label  class="accordion__label"> 
-            How do I reset my password?
-            <button href="#" onclick="OpenOrCloseQuestion('thirdQuestion', 'arrowThirdQuestion')">
-              <img class="arrow" id="arrowThirdQuestion" src="images/icon-arrow-down.svg" alt="Seta"> 
-            </button>
-          </label> 
-          <div class="accordion__content hidden" id="thirdQuestion"> 
-            <p> Click “Forgot password” from the login page or “Change password” from your profile page.
-                A reset link will be emailed to you.
-            </p>
-          </div>
-          <div class="linha-horizontal"></div>
-        </div>
-        <div class="info">
-          <label class="accordion__label" id="thirdQuestion"> 
-            Can I cancel my subscription?
-            <button href="#" onclick="OpenOrCloseQuestion('fourthQuestion', 'arrowFourthQuestion')">
-              <img class="arrow" id="arrowFourthQuestion" src="images/icon-arrow-down.svg" alt="Seta"> 
-            </button>
-          </label> 
-          <div class="accordion__content hidden" id="fourthQuestion">
-            <p>        
+    <section class="infos">     
+      <h1>FAQ</h1>
+      <ul>
+        <li>
+          <h2>
+            <span class="question"> How many team members can I invite? </span>
+            <img class="arrow" id="arrowFirstQuestion" src="images/icon-arrow-down.svg" alt="Seta"> 
+          </h2>
+          <p> 
+              You can invite up to 2 additional users on the Free plan. There is no limit on 
+              team members for the Premium plan.
+          </p>
+        </li>
+        <li>
+          <h2>
+            <span  class="question" > What is the maximum file upload size? </span>
+            <img class="arrow" id="arrowSecondQuestion" src="images/icon-arrow-down.svg" alt="Seta"> 
+          </h2>  
+          <p>   
+              No more than 2GB. All files in your account must fit your allotted storage space.
+          </p>
+        </li>
+        <li>
+          <h2>
+            <span  class="question"> How do I reset my password? </span>
+            <img class="arrow" id="arrowSecondQuestion" src="images/icon-arrow-down.svg" alt="Seta"> 
+          </h2>
+          <p> 
+              Click “Forgot password” from the login page or “Change password” from your profile page.
+              A reset link will be emailed to you.
+          </p>
+        </li>
+        <li>
+          <h2>
+            <span  class="question" > Can I cancel my subscription? </span>
+            <img class="arrow" id="arrowFourthQuestion" src="images/icon-arrow-down.svg" alt="Seta"> 
+          </h2>
+          <p>
               Yes! Send us a message and we’ll process your request no questions asked.
-            </p>
-          </div>
-          <div class="linha-horizontal"></div>
-        </div>
-        <div class="info">
-          <label  class="accordion__label"> 
-            Do you provide additional support?
-            <button href="#" onclick="OpenOrCloseQuestion('fifthQuestion', 'arrowFifthQuestion')">
-              <img class="arrow" id="arrowFifthQuestion" src="images/icon-arrow-down.svg" alt="Seta"> 
-            </button>
-          </label> 
-          <div class="accordion__content hidden" id="fifthQuestion">
-            <p> Chat and email support is available 24/7. Phone lines are open during normal business hours.
-            </p>
-          </div>
-          <div class="linha-horizontal"></div>
-        </div>
-      </div>
+          </p>
+        </li>
+        <li>
+          <h2>
+            <span  class="question"> Do you provide additional support? </span>
+            <img class="arrow" id="arrowFifthQuestion" src="images/icon-arrow-down.svg" alt="Seta"> 
+          </h2>
+          <p> 
+              Chat and email support is available 24/7. Phone lines are open during normal business hours.
+          </p>
+        </li>
+      </ul>
     </section>
+
+    </main>
   </body>
   <script src="./main.js"> </script>
 </html>

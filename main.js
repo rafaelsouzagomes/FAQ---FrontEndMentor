@@ -1,61 +1,50 @@
+let allQuestionssLi = document.querySelectorAll('li');
 
-function OpenOrCloseQuestion(questionName, arrowId){
+for (let i = 0; i < allQuestionssLi.length; i++) {
+    allQuestionssLi[i].addEventListener('click', function () {
+         
+        let answer =  document.querySelectorAll('p')[i];
+        let arrow = document.querySelectorAll('.arrow')[i];
+        let question = document.querySelectorAll('.question')[i];
 
-    const question = document.getElementById(questionName);
-    const arrow = document.getElementById(arrowId);
-    
-    if(question.classList.contains('hidden')){
-        question.classList.remove('hidden');
-        arrow.classList.add('arrow-rotated');
-        ocultarTodasPerguntasExceto(questionName);
-    }
-    else{
-        question.classList.add('hidden');
-        arrow.classList.remove('arrow-rotated');
+        if (answer.classList.contains('show')) {
+            closeAllQuestions();
+            arrow.style.transform="rotate(0deg)"
+            hideAnswer(answer);
+            resetFont(question);
+        } else {
+            closeAllQuestions();
+            arrow.style.transform="rotate(180deg)"
+            showAnswer(answer);
+            focusFont(question);
+        }
+    })
+}
+
+function closeAllQuestions(){
+    for (let i = 0; i < allQuestionssLi.length; i++) {
+        document.querySelectorAll('.arrow')[i].style.transform="rotate(0deg)"
+        hideAnswer(document.querySelectorAll('p')[i]);
+        resetFont(document.querySelectorAll('.question')[i]);
     }
 }
 
 
-
-function ocultarTodasPerguntasExceto(questionName){
-
-    const question1 = document.getElementById('firstQuestion');
-    const question2 = document.getElementById('secondQuestion');
-    const question3 = document.getElementById('thirdQuestion');
-    const question4 = document.getElementById('fourthQuestion');
-    const question5 = document.getElementById('fifthQuestion');
-
-    const arrow1 = document.getElementById('arrowFirstQuestion');
-    const arrow2 = document.getElementById('arrowSecondQuestion');
-    const arrow3 = document.getElementById('arrowThirdQuestion');
-    const arrow4 = document.getElementById('arrowFourthQuestion');
-    const arrow5 = document.getElementById('arrowFifthQuestion');
-
-
-
-    if(questionName!=='firstQuestion'){
-        question1.classList.add('hidden');
-        arrow1.classList.remove('arrow-rotated');
-
-    }
-    
-    if(questionName!=='secondQuestion'){
-        question2.classList.add('hidden');
-        arrow2.classList.remove('arrow-rotated');
-    }
-
-    if(questionName!=='thirdQuestion'){
-        question3.classList.add('hidden');
-        arrow3.classList.remove('arrow-rotated');
-    }
-
-    if(questionName!=='fourthQuestion'){
-        question4.classList.add('hidden');
-        arrow4.classList.remove('arrow-rotated');        
-    }
-
-    if(questionName!=='fifthQuestion'){
-        question5.classList.add('hidden');
-        arrow5.classList.remove('arrow-rotated');
-    }
+function focusFont(qst) {
+    qst.classList.add('boldFont');
 }
+
+function resetFont(qst) {
+    qst.classList.remove('boldFont');
+}
+
+function showAnswer(element) {
+    element.classList.remove('hidden');
+    element.classList.add('show');
+}
+
+function hideAnswer(element) {
+    element.classList.remove('show');
+    element.classList.add('hidden');
+}
+
